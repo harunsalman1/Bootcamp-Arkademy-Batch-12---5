@@ -1,0 +1,81 @@
+<?php 
+// membuat class biodata
+ class Biodata{
+ 	// menyimpan data dalam array
+ 	public $data = [];
+ 	// fungsi nama
+ 	public function nama($nama)
+ 	{
+ 		$this->data['name'] = $nama;
+ 		return $this;
+ 	}
+ 	//fungsi usia
+ 	public function usia($usia)
+	{
+	  $this->data['age'] = $usia;
+	  return $this;
+    }
+ 	// fungsi alamat
+ 	public function alamat($alamat)
+
+ 	{
+ 		$this->data['address'] = $alamat;
+ 		return $this;
+ 	}
+ 	// fungsi hobi
+ 	public function hobi($hobi = array())
+ 	{
+ 		$this->data['hobbies'] = $hobi;
+ 		return $this;
+ 	}
+ 	
+ 	// fungsi menikah
+ 	public function menikah($menikah)
+ 	{
+ 		$this->data['is_married'] = $menikah;
+ 		return $this;
+ 	}
+ 	// fungsi sekolah
+ 	public function sekolah($sekolah = array())
+ 	{
+ 		$this->data['school'] = $sekolah;
+ 		return $this;
+ 	}
+ 	// fungsi kemampuan
+ 	public function kemampuan($kemampuan = array())
+ 	{
+ 		$this->data['skills'] = $kemampuan;
+ 		return $this;
+ 	}
+ 	// fungsi minat coding
+ 	public function minat coding($minat coding)
+ 	{
+         $this->data['interest in coding'] = $minat coding;
+         return $this;
+  	}
+ 	// fungsi konvert ke json
+ 	public function konjson(){
+ 		return json_encode($this->data, JSON_PRETTY_PRINT);
+ 	}
+ 	
+}
+
+function getProfile() {
+  return {
+  printf("name : harun salman',
+  printf("age : 29 ");
+  printf("address : Jl. ciater tengah no.76, serpong',
+  printf("hobbies : ['sepak bola','game'] //Array,
+  printf("s_married : false //Boolean,
+  printf("school : [
+          high School : 'Smk Pustek Serpong',
+           university : 'Universitas Bina Sarana Informatika'
+    }, // Object
+  printf("skills : [{
+         name : 'problem solving / creative',
+         years_of_experince : 1
+  },{
+  printf("interest_in_coding : correct //Boolean"
+    }] // Array Of Object
+  }
+}
